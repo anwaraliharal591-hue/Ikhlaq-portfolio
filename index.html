@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IKHLAQ — Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">IQ</div>
+      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+      <span class="loader-text" id="loader-text">Loading...</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-wrap">
+      <a href="#home" class="logo">IK<span>HLAQ</span><em>.</em></a>
+      <div class="nav-center">
+        <a href="#about" class="nav-link" data-text="About">About</a>
+        <a href="#services" class="nav-link" data-text="Services">Services</a>
+        <a href="#portfolio" class="nav-link" data-text="Work">Work</a>
+        <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+        <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+      </div>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="burger" id="burger"><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mob-link">About</a>
+      <a href="#services" class="mob-link">Services</a>
+      <a href="#portfolio" class="mob-link">Work</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas class="particle-canvas" id="particle-canvas"></canvas>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Projects
+      </div>
+      <h1 class="hero-title">
+        <span class="line-wrap"><span class="line line-1">IKHLAQ</span></span>
+        <span class="line-wrap glitch-wrap">
+          <span class="line line-2 glitch" data-text="CREATIVE">CREATIVE</span>
+        </span>
+        <span class="line-wrap">
+          <span class="line line-3 gradient-text">PORTFOLIO.</span>
+        </span>
+      </h1>
+      <div class="hero-sub">
+        <div class="type-line">
+          <span class="type-prefix">I craft — </span>
+          <span class="typed-text" id="typed-text"></span>
+          <span class="type-cursor">|</span>
+        </div>
+      </div>
+      <p class="hero-para">Video Editor &bull; Web Developer &bull; Web Designer &bull; Graphic Designer<br/>Turning ideas into digital masterpieces that move people.</p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-mag" data-magnetic>
+          <span class="btn-mag-text">Explore Work</span>
+          <span class="btn-mag-arrow">&#8594;</span>
+        </a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="mouse-icon">
+          <div class="mouse-dot"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </div>
+    <div class="hero-floating">
+      <div class="float-card f1">
+        <div class="fc-icon">&#127916;</div>
+        <span>Video Editing</span>
+      </div>
+      <div class="float-card f2">
+        <div class="fc-icon">&#128187;</div>
+        <span>Web Dev</span>
+      </div>
+      <div class="float-card f3">
+        <div class="fc-icon">&#127912;</div>
+        <span>Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>Video Editing</span><span class="dot">&#10022;</span>
+      <span>Web Development</span><span class="dot">&#10022;</span>
+      <span>Web Design</span><span class="dot">&#10022;</span>
+      <span>Graphic Design</span><span class="dot">&#10022;</span>
+      <span>Motion Graphics</span><span class="dot">&#10022;</span>
+      <span>Brand Identity</span><span class="dot">&#10022;</span>
+      <span>UI / UX</span><span class="dot">&#10022;</span>
+      <span>After Effects</span><span class="dot">&#10022;</span>
+      <span>Premiere Pro</span><span class="dot">&#10022;</span>
+      <span>Figma</span><span class="dot">&#10022;</span>
+      <!-- duplicate for seamless loop -->
+      <span>Video Editing</span><span class="dot">&#10022;</span>
+      <span>Web Development</span><span class="dot">&#10022;</span>
+      <span>Web Design</span><span class="dot">&#10022;</span>
+      <span>Graphic Design</span><span class="dot">&#10022;</span>
+      <span>Motion Graphics</span><span class="dot">&#10022;</span>
+      <span>Brand Identity</span><span class="dot">&#10022;</span>
+      <span>UI / UX</span><span class="dot">&#10022;</span>
+      <span>After Effects</span><span class="dot">&#10022;</span>
+      <span>Premiere Pro</span><span class="dot">&#10022;</span>
+      <span>Figma</span><span class="dot">&#10022;</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about reveal-section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left reveal-left">
+          <div class="section-label">// about me</div>
+          <h2 class="section-heading">The Creative<br/><span class="gradient-text">Behind the Work</span></h2>
+          <p class="about-body">I am <strong>Ikhlaq</strong> — a multi-disciplinary creative professional with 5+ years of experience delivering premium results across video, web, and design. I don't just make things look good — I make them work, convert, and stand out.</p>
+          <p class="about-body">Every project gets my full creative energy, obsessive attention to detail, and a relentless drive to exceed expectations. When you work with me, you get world-class quality — no excuses.</p>
+          <div class="about-tags">
+            <span class="tag">Premiere Pro</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag">React</span>
+            <span class="tag">Illustrator</span>
+          </div>
+          <a href="#contact" class="btn-mag" data-magnetic>
+            <span class="btn-mag-text">Start a Project</span>
+            <span class="btn-mag-arrow">&#8594;</span>
+          </a>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="avatar-block">
+            <div class="av-ring-outer">
+              <div class="av-ring-inner">
+                <div class="av-core">
+                  <span class="av-text">IQ</span>
+                </div>
+              </div>
+            </div>
+            <div class="av-orbit">
+              <div class="orbit-item oi-1">&#127775;</div>
+              <div class="orbit-item oi-2">&#128187;</div>
+              <div class="orbit-item oi-3">&#127912;</div>
+              <div class="orbit-item oi-4">&#127916;</div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-num" data-count="5">0</div>
+              <div class="stat-plus">+</div>
+              <div class="stat-lbl">Years</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="120">0</div>
+              <div class="stat-plus">+</div>
+              <div class="stat-lbl">Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="80">0</div>
+              <div class="stat-plus">+</div>
+              <div class="stat-lbl">Clients</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="100">0</div>
+              <div class="stat-plus">%</div>
+              <div class="stat-lbl">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services reveal-section" id="services">
+    <div class="container">
+      <div class="section-label center-label">// services</div>
+      <h2 class="section-heading centered">What I <span class="gradient-text">Deliver</span></h2>
+      <div class="services-grid">
+
+        <div class="svc-card tilt-card">
+          <div class="svc-num">01</div>
+          <div class="svc-icon-wrap s-purple">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="28" height="22" rx="3"/><polygon points="32 18 44 13 44 31 32 26"/><line x1="4" y1="38" x2="44" y2="38"/></svg>
+          </div>
+          <h3>Video Editing</h3>
+          <p>Cinematic edits, brand films, reels, YouTube content, colour grading, motion graphics — stories that stop scrolling and move people.</p>
+          <div class="svc-tools"><span>Premiere Pro</span><span>After Effects</span><span>DaVinci</span></div>
+          <div class="svc-glow glow-purple"></div>
+        </div>
+
+        <div class="svc-card tilt-card">
+          <div class="svc-num">02</div>
+          <div class="svc-icon-wrap s-cyan">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 8 4 24 16 40"/><polyline points="32 8 44 24 32 40"/><line x1="20" y1="4" x2="28" y2="44"/></svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Fast, responsive, and pixel-perfect websites. From landing pages to full apps — built with clean code, blazing speed, and purpose.</p>
+          <div class="svc-tools"><span>HTML/CSS</span><span>JavaScript</span><span>React</span></div>
+          <div class="svc-glow glow-cyan"></div>
+        </div>
+
+        <div class="svc-card tilt-card">
+          <div class="svc-num">03</div>
+          <div class="svc-icon-wrap s-pink">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="36" height="36" rx="4"/><line x1="6" y1="18" x2="42" y2="18"/><line x1="18" y1="18" x2="18" y2="42"/></svg>
+          </div>
+          <h3>Web Design</h3>
+          <p>UI/UX that converts. Clean layouts, intuitive flows, and visual systems that make your brand impossible to ignore.</p>
+          <div class="svc-tools"><span>Figma</span><span>Adobe XD</span><span>Prototyping</span></div>
+          <div class="svc-glow glow-pink"></div>
+        </div>
+
+        <div class="svc-card tilt-card">
+          <div class="svc-num">04</div>
+          <div class="svc-icon-wrap s-gold">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="24 4 30 18 44 20 34 30 36 44 24 37 12 44 14 30 4 20 18 18"/></svg>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>Logos, brand identities, social media graphics, posters, print-ready artwork. Visuals that make your brand unforgettable.</p>
+          <div class="svc-tools"><span>Photoshop</span><span>Illustrator</span><span>Branding</span></div>
+          <div class="svc-glow glow-gold"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio-section reveal-section" id="portfolio">
+    <div class="container">
+      <div class="section-label center-label">// portfolio</div>
+      <h2 class="section-heading centered">Selected <span class="gradient-text">Work</span></h2>
+      <div class="port-filters">
+        <button class="pf-btn active" data-filter="all">All Work</button>
+        <button class="pf-btn" data-filter="video">Video</button>
+        <button class="pf-btn" data-filter="web">Web</button>
+        <button class="pf-btn" data-filter="design">Design</button>
+        <button class="pf-btn" data-filter="graphics">Graphics</button>
+      </div>
+      <div class="port-grid" id="port-grid">
+
+        <div class="port-item tilt-card" data-cat="video">
+          <div class="port-thumb pt-1">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><polygon points="20 14 34 24 20 34"/><circle cx="24" cy="24" r="20"/></svg>
+            </div>
+            <div class="port-hover-overlay">
+              <span>View Project &#8599;</span>
+            </div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Video Editing</span>
+            <h4>Brand Cinema Reel</h4>
+            <p>Cinematic brand film with motion graphics &amp; colour grading for a fashion label.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="video">
+          <div class="port-thumb pt-2">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><polygon points="20 14 34 24 20 34"/><circle cx="24" cy="24" r="20"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Video Editing</span>
+            <h4>YouTube Channel Edit</h4>
+            <p>Long-form video with animated intro, captions, and professional sound design.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="video">
+          <div class="port-thumb pt-3">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><polygon points="20 14 34 24 20 34"/><circle cx="24" cy="24" r="20"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Video Editing</span>
+            <h4>Social Media Reels</h4>
+            <p>High-energy short reels for Instagram and TikTok with trending transitions.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="web">
+          <div class="port-thumb pt-4">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="6" y="10" width="36" height="28" rx="3"/><line x1="6" y1="18" x2="42" y2="18"/><circle cx="12" cy="14" r="1.5" fill="rgba(255,255,255,0.6)"/><circle cx="18" cy="14" r="1.5" fill="rgba(255,255,255,0.6)"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Web Dev</span>
+            <h4>E-Commerce Platform</h4>
+            <p>Full responsive store with cart, product pages, checkout, and payment flow.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="web">
+          <div class="port-thumb pt-5">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="6" y="10" width="36" height="28" rx="3"/><line x1="6" y1="18" x2="42" y2="18"/><circle cx="12" cy="14" r="1.5" fill="rgba(255,255,255,0.6)"/><circle cx="18" cy="14" r="1.5" fill="rgba(255,255,255,0.6)"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Web Dev</span>
+            <h4>SaaS Landing Page</h4>
+            <p>High-converting product page with pricing, testimonials, and animated CTAs.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="web">
+          <div class="port-thumb pt-6">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="6" y="10" width="36" height="28" rx="3"/><line x1="6" y1="18" x2="42" y2="18"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Web Dev</span>
+            <h4>Restaurant Website</h4>
+            <p>Elegant restaurant site with menus, reservations, and animated hero.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="design">
+          <div class="port-thumb pt-7">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="10" y="6" width="28" height="36" rx="3"/><line x1="16" y1="16" x2="32" y2="16"/><line x1="16" y1="22" x2="32" y2="22"/><line x1="16" y1="28" x2="24" y2="28"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">UI Design</span>
+            <h4>Mobile App UI Kit</h4>
+            <p>Complete Figma UI system for a fitness tracking mobile application.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="design">
+          <div class="port-thumb pt-8">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="10" y="6" width="28" height="36" rx="3"/><line x1="16" y1="16" x2="32" y2="16"/><line x1="16" y1="22" x2="32" y2="22"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">UI Design</span>
+            <h4>Admin Dashboard</h4>
+            <p>Dark-theme admin UI with data charts, analytics, and modular components.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="graphics">
+          <div class="port-thumb pt-9">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><polygon points="24 4 28 18 44 18 31 27 36 42 24 33 12 42 17 27 4 18 20 18"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Graphics</span>
+            <h4>Brand Identity Kit</h4>
+            <p>Complete branding with logo, palette, typography, and brand guidelines.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="graphics">
+          <div class="port-thumb pt-10">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="4"/><circle cx="16" cy="16" r="4"/><polyline points="6 32 16 22 24 30 32 20 42 32"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Graphics</span>
+            <h4>Social Media Pack</h4>
+            <p>30-piece graphic set for Instagram, Facebook, and Twitter campaigns.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="graphics">
+          <div class="port-thumb pt-11">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="4"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">Graphics</span>
+            <h4>Event Poster Series</h4>
+            <p>Bold promotional posters for a music festival with layered typography.</p>
+          </div>
+        </div>
+
+        <div class="port-item tilt-card" data-cat="design">
+          <div class="port-thumb pt-12">
+            <div class="pt-lines"></div>
+            <div class="pt-center-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><circle cx="24" cy="24" r="18"/><polyline points="24 10 24 24 32 32"/></svg>
+            </div>
+            <div class="port-hover-overlay"><span>View Project &#8599;</span></div>
+          </div>
+          <div class="port-meta">
+            <span class="port-cat-tag">UI Design</span>
+            <h4>Landing Page Redesign</h4>
+            <p>UX overhaul for a B2B company — 40% conversion improvement.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section reveal-section" id="skills">
+    <div class="container">
+      <div class="skills-layout">
+        <div class="skills-left reveal-left">
+          <div class="section-label">// expertise</div>
+          <h2 class="section-heading">Skills &amp;<br/><span class="gradient-text">Mastery</span></h2>
+          <p class="skills-body">Years of daily creative work across multiple disciplines — every tool below has shaped hundreds of real projects and satisfied clients worldwide.</p>
+          <div class="skill-circles">
+            <div class="sc-item">
+              <svg class="sc-svg" viewBox="0 0 80 80">
+                <circle class="sc-bg" cx="40" cy="40" r="34" />
+                <circle class="sc-fill" cx="40" cy="40" r="34" data-pct="95" style="stroke: #a855f7;" />
+              </svg>
+              <div class="sc-label">Premiere<br/>Pro</div>
+              <div class="sc-pct">95%</div>
+            </div>
+            <div class="sc-item">
+              <svg class="sc-svg" viewBox="0 0 80 80">
+                <circle class="sc-bg" cx="40" cy="40" r="34" />
+                <circle class="sc-fill" cx="40" cy="40" r="34" data-pct="90" style="stroke: #06b6d4;" />
+              </svg>
+              <div class="sc-label">Photoshop</div>
+              <div class="sc-pct">90%</div>
+            </div>
+            <div class="sc-item">
+              <svg class="sc-svg" viewBox="0 0 80 80">
+                <circle class="sc-bg" cx="40" cy="40" r="34" />
+                <circle class="sc-fill" cx="40" cy="40" r="34" data-pct="88" style="stroke: #f43f5e;" />
+              </svg>
+              <div class="sc-label">After<br/>Effects</div>
+              <div class="sc-pct">88%</div>
+            </div>
+            <div class="sc-item">
+              <svg class="sc-svg" viewBox="0 0 80 80">
+                <circle class="sc-bg" cx="40" cy="40" r="34" />
+                <circle class="sc-fill" cx="40" cy="40" r="34" data-pct="92" style="stroke: #f59e0b;" />
+              </svg>
+              <div class="sc-label">Figma</div>
+              <div class="sc-pct">92%</div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-right reveal-right">
+          <div class="skill-bars">
+            <div class="skb-item">
+              <div class="skb-head"><span>HTML &amp; CSS</span><span class="skb-pct">96%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="96" style="background: linear-gradient(90deg,#a855f7,#06b6d4);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>JavaScript</span><span class="skb-pct">85%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="85" style="background: linear-gradient(90deg,#06b6d4,#f43f5e);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>React.js</span><span class="skb-pct">78%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="78" style="background: linear-gradient(90deg,#f43f5e,#f59e0b);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>Adobe Illustrator</span><span class="skb-pct">86%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="86" style="background: linear-gradient(90deg,#f59e0b,#a855f7);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>Video Colour Grading</span><span class="skb-pct">93%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="93" style="background: linear-gradient(90deg,#a855f7,#f43f5e);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>Motion Graphics</span><span class="skb-pct">88%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="88" style="background: linear-gradient(90deg,#06b6d4,#a855f7);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>UI / UX Design</span><span class="skb-pct">91%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="91" style="background: linear-gradient(90deg,#f43f5e,#06b6d4);"></div></div>
+            </div>
+            <div class="skb-item">
+              <div class="skb-head"><span>Brand Identity</span><span class="skb-pct">89%</span></div>
+              <div class="skb-track"><div class="skb-fill" data-w="89" style="background: linear-gradient(90deg,#f59e0b,#f43f5e);"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi-section reveal-section" id="testimonials">
+    <div class="container">
+      <div class="section-label center-label">// testimonials</div>
+      <h2 class="section-heading centered">What Clients <span class="gradient-text">Say</span></h2>
+      <div class="testi-grid">
+
+        <div class="testi-card tilt-card">
+          <div class="testi-quote">"</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Ikhlaq completely transformed our brand video. The editing was cinematic, transitions flawless, and he delivered ahead of schedule. Absolutely world-class work — I have never seen anything quite like it.</p>
+          <div class="testi-author">
+            <div class="ta-ava" style="background:linear-gradient(135deg,#a855f7,#06b6d4);">A</div>
+            <div>
+              <strong>Ahmed Raza</strong>
+              <span>CEO, BrandCraft Studio</span>
+            </div>
+          </div>
+          <div class="testi-glow"></div>
+        </div>
+
+        <div class="testi-card tilt-card">
+          <div class="testi-quote">"</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>The website Ikhlaq built exceeded every expectation. Fast, stunning on all devices, and our sales went up 35% in the first month. He has an eye for what actually works — not just what looks pretty.</p>
+          <div class="testi-author">
+            <div class="ta-ava" style="background:linear-gradient(135deg,#f43f5e,#a855f7);">S</div>
+            <div>
+              <strong>Sara Khan</strong>
+              <span>Founder, ShopElite</span>
+            </div>
+          </div>
+          <div class="testi-glow"></div>
+        </div>
+
+        <div class="testi-card tilt-card">
+          <div class="testi-quote">"</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Our engagement doubled after Ikhlaq designed our content and edited our reels. He has a gift for understanding what works visually and emotionally. A true professional and an incredible talent.</p>
+          <div class="testi-author">
+            <div class="ta-ava" style="background:linear-gradient(135deg,#06b6d4,#f43f5e);">M</div>
+            <div>
+              <strong>Michael Torres</strong>
+              <span>Marketing Director, NovaCo</span>
+            </div>
+          </div>
+          <div class="testi-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section reveal-section" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left reveal-left">
+          <div class="section-label">// contact</div>
+          <h2 class="section-heading">Ready to Build<br/><span class="gradient-text">Something Great?</span></h2>
+          <p class="contact-body">Whether it's a video, a website, a full brand identity, or all of the above — I'm here and ready. Let's create something that matters.</p>
+          <div class="contact-items">
+            <div class="ci-row">
+              <div class="ci-icon ci-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-val">ikhlaq@email.com</div>
+              </div>
+            </div>
+            <div class="ci-row">
+              <div class="ci-icon ci-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">Availability</div>
+                <div class="ci-val">Open for freelance &amp; collab</div>
+              </div>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="#" class="soc-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="soc-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="soc-btn" aria-label="Behance">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6h8c2.2 0 4 1.8 4 4s-1.8 4-4 4H1V6zM1 14h9c2.4 0 4.5 2 4.5 4.5S12.4 23 10 23H1V14z"/><path d="M16 7h7M16 12h7"/></svg>
+            </a>
+            <a href="#" class="soc-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="cform" id="cform">
+            <div class="cf-row">
+              <div class="cf-group">
+                <input type="text" id="cf-name" placeholder=" " required />
+                <label for="cf-name">Full Name</label>
+              </div>
+              <div class="cf-group">
+                <input type="email" id="cf-email" placeholder=" " required />
+                <label for="cf-email">Email Address</label>
+              </div>
+            </div>
+            <div class="cf-group">
+              <select id="cf-service">
+                <option value="">Select a Service</option>
+                <option value="video">Video Editing</option>
+                <option value="webdev">Web Development</option>
+                <option value="webdesign">Web Design</option>
+                <option value="graphics">Graphic Design</option>
+                <option value="all">Multiple Services</option>
+              </select>
+              <label for="cf-service">Service Needed</label>
+            </div>
+            <div class="cf-group">
+              <textarea id="cf-msg" rows="5" placeholder=" " required></textarea>
+              <label for="cf-msg">Your Message</label>
+            </div>
+            <button type="submit" class="cf-submit">
+              <span class="cf-submit-text">Send Message</span>
+              <span class="cf-submit-icon">&#8594;</span>
+              <span class="cf-ripple"></span>
+            </button>
+            <div class="cf-success" id="cf-success">
+              <span>&#10003;</span> Message sent! I'll get back to you within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">IK<span>HLAQ</span><em>.</em></div>
+        <p>Video Editor &bull; Web Developer &bull; Web Designer &bull; Graphic Designer</p>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Ikhlaq. All rights reserved.</span>
+        <a href="#home" class="back-top">Back to Top &#8593;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
